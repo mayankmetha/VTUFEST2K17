@@ -22,7 +22,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DetailsActivity extends AppCompatActivity {
+public class DetailsActivity extends AppCompatActivity{
     String loc;
     String jsonLoc;
     List<EventItem> data;
@@ -65,6 +65,20 @@ public class DetailsActivity extends AppCompatActivity {
         CollapsingToolbarLayout mActionBarToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbar);
         mActionBarToolbar.setTitle(loc);
 
+        //fab
+        final FloatingActionButton navifab = (FloatingActionButton) findViewById(R.id.nav_button);
+        navifab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LatLng latlng = getLoc(loc);
+                map = "http://maps.google.co.in/maps?q=loc:"+latlng.latitude+","+latlng.longitude+"("+loc+")";
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(map));
+                intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+                startActivity(intent);
+
+            }
+        });
+
         //recyclerView
         recyclerView = (RecyclerView)findViewById(R.id.event_list);
         recyclerView.setHasFixedSize(true);
@@ -72,19 +86,6 @@ public class DetailsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new EventListAdapter(DetailsActivity.this,data);
         recyclerView.setAdapter(mAdapter);
-
-        FloatingActionButton navifab = (FloatingActionButton) findViewById(R.id.nav_button);
-        navifab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LatLng latlng = getLoc(loc);
-                map = "http://maps.google.co.in/maps?q=loc:"+latlng.latitude+","+latlng.longitude+"("+"Destination"+")";
-                Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(map));
-                intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
-                startActivity(intent);
-
-            }
-        });
 
 
     }
@@ -137,4 +138,5 @@ public class DetailsActivity extends AppCompatActivity {
         }
         return mMapsItems.get(res).navi;
     }
+
 }

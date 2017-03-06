@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 def gitVersion() {
     def process = "git rev-list master --count".execute()
-    return process.text.toInteger()
+    return process.text.toInteger()+1
 }
 
 android {
