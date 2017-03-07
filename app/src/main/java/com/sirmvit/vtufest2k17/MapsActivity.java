@@ -101,6 +101,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.setOnMarkerClickListener(this);
         googleMap.clear();
         final List<MapsItem> list = MapsContent.ITEMS;
+        final List<MapsItem> hts = MapsContent.HTS;
         //style Map
         try {
             // Customise the styling of the base map using a JSON object defined
@@ -117,7 +118,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
 
         //Place Markers
-
+        for (int i = 0; i < hts.size(); i++) {
+            MapsItem current = hts.get(i);
+            //style Marker
+            googleMap.addMarker(new MarkerOptions().position(current.position)
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.washroom_vector)));
+                    //.icon(BitmapDescriptorFactory.fromBitmap(getMarker(current.title))));
+        }
         for (int i = 0; i < list.size(); i++) {
             MapsItem current = list.get(i);
             //style Marker
