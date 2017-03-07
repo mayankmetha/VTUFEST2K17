@@ -28,7 +28,7 @@ class MapsContent {
     private static final LatLng LOC_ATM = new LatLng(13.149824,77.610034);//atm - 16
     private static final LatLng LOC_CANT = new LatLng(13.149910,77.610383); //canteen - 17
     private static final LatLng LOC_BUS = new LatLng(13.1511705,77.6073934); //bus depot - 18
-    private static final LatLng LOC_HT = new LatLng(13.151150, 77.608221); // washroom block - 19
+    //private static final LatLng LOC_HT = new LatLng(13.151150, 77.608221); // washroom block - 19
     private static final LatLng LOC_AUDIBUS = new LatLng(13.150918,77.607582); //navigation for auditorium and bus depot
     private static final LatLng LOC_GROUNDNAV = new LatLng(13.149468, 77.606194);//navigation for ground
     static List<MapsItem> ITEMS;
@@ -69,7 +69,7 @@ class MapsContent {
         addItem(new MapsItem(16,"ATM",LOC_ATM,LOC_ATM));
         addItem(new MapsItem(17,"Canteen",LOC_CANT,LOC_CANT));
         addItem(new MapsItem(18,"Sir MVIT Bus Depot",LOC_BUS,LOC_AUDIBUS));
-        addItem(new MapsItem(19,"Washroom",LOC_HT,LOC_HT));
+        //addItem(new MapsItem(19,"Washroom",LOC_HT,LOC_HT));
         //washrooms
         HTS = new ArrayList<>();
         addHts(new MapsItem(0,"Science Block",HTS_SCIENCE,HTS_SCIENCE));

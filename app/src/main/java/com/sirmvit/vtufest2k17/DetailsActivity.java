@@ -126,7 +126,7 @@ public class DetailsActivity extends AppCompatActivity{
             case 16: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
             case 17: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
             case 18: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
-            case 19: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            //case 19: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
         }
         return bitmap;
     }
