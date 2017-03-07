@@ -32,6 +32,8 @@ public class DetailsActivity extends AppCompatActivity{
     final List<MapsItem> mMapsItems = MapsContent.ITEMS;
     Bitmap image;
     String map;
+    CollapsingToolbarLayout mActionBarToolbar;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +41,8 @@ public class DetailsActivity extends AppCompatActivity{
 
         loc = MapsActivity.Data.getTitle();
         image = getImage(loc);
-        ImageView imageView = (ImageView) findViewById(R.id.toolbarImage);
+        imageView = (ImageView) findViewById(R.id.toolbarImage);
         imageView.setImageBitmap(image);
-        ///// The arraylist in the end of this portion contains the list of all the events pertaining to the given block
 
         jsonLoc = MapsActivity.jsonData;
 
@@ -62,8 +63,10 @@ public class DetailsActivity extends AppCompatActivity{
         }
         //////////////////////////////////////////////////////////////
 
-        CollapsingToolbarLayout mActionBarToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbar);
+        mActionBarToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbar);
         mActionBarToolbar.setTitle(loc);
+
+
 
         //fab
         final FloatingActionButton navifab = (FloatingActionButton) findViewById(R.id.nav_button);
@@ -94,7 +97,7 @@ public class DetailsActivity extends AppCompatActivity{
     Bitmap getImage(String str) {
         //default image
         int res=-1;
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.raw.demo);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo);
         for (int i = 0; i < mMapsItems.size(); i++) {
             MapsItem current = mMapsItems.get(i);
             //get image for specific loc
@@ -104,25 +107,25 @@ public class DetailsActivity extends AppCompatActivity{
             }
         }
         switch(res) {
-            case 0 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 1 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 2 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 3 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 4 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 5 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 6 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 7 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 8 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 9 : BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 10: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 11: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 12: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 13: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 14: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 15: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 16: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 17: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
-            case 18: BitmapFactory.decodeResource(getResources(),R.raw.demo); break;
+            case 0 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 1 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 2 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 3 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 4 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 5 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.library); break;
+            case 6 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 7 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 8 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 9 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 10: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 11: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.mba); break;
+            case 12: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 13: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 14: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 15: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 16: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 17: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 18: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
         }
         return bitmap;
     }
