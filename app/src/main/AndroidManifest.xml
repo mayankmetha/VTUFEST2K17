@@ -36,7 +36,8 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:label="@string/title_activity_maps"
+            android:autoRemoveFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -44,8 +45,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailsActivity"
-            android:theme="@style/FirstRunActivityTheme"/>
-        <activity android:name=".AboutActivity">
+                  android:parentActivityName=".MapsActivity"
+            android:theme="@style/FirstRunActivityTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value="com.sirmvit.vtufest2k17.MapsActivity" />
+        </activity>
+        <activity android:name=".AboutActivity"
+            android:parentActivityName=".MapsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value="com.sirmvit.vtufest2k17.MapsActivity" />
         </activity>
         <activity android:name=".FirstRunActivity"
             android:theme="@style/FirstRunActivityTheme">

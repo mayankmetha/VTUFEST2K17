@@ -178,7 +178,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        MapsActivity.this.finish();
+                    finish();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -196,7 +196,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onStart();
         if (isInitLaunch) {
             startActivity(new Intent(MapsActivity.this, FirstRunActivity.class));
-            finish();
+            if(android.os.Build.VERSION.SDK_INT >= 21) {
+                super.finishAndRemoveTask();
+            }
+            else {
+                super.finish();
+            }
         }
     }
 
@@ -231,5 +236,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
         return json;
     }
+
 
 }
