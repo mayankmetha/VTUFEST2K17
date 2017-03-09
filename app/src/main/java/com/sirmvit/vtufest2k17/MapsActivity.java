@@ -101,7 +101,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.setOnMarkerClickListener(this);
         googleMap.clear();
         final List<MapsItem> list = MapsContent.ITEMS;
-        final List<MapsItem> hts = MapsContent.HTS;
+        //final List<MapsItem> hts = MapsContent.HTS;
         //style Map
         try {
             // Customise the styling of the base map using a JSON object defined
@@ -117,15 +117,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             Log.e(TAG, "Can't find style. Error: ", e);
         }
 
-        //Place Markers
-        for (int i = 0; i < hts.size(); i++) {
-            MapsItem current = hts.get(i);
-            //style Marker
-            googleMap.addMarker(new MarkerOptions().position(current.position)
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.washroom_vector)));
-                    //.icon(BitmapDescriptorFactory.fromBitmap(getMarker(current.title))));
-        }
-        for (int i = 0; i < list.size(); i++) {
+        for(int i = 0; i < list.size(); i++) {
             MapsItem current = list.get(i);
             //style Marker
             googleMap.addMarker(new MarkerOptions().position(current.position)
@@ -190,7 +182,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
+                        if(android.os.Build.VERSION.SDK_INT >= 21) {
+                            finishAndRemoveTask();
+                        }
+                        else {
+                            finish();
+                        }
                     }
                 });
         AlertDialog alert = builder.create();
@@ -203,12 +200,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onStart();
         if (isInitLaunch) {
             startActivity(new Intent(MapsActivity.this, FirstRunActivity.class));
-            if(android.os.Build.VERSION.SDK_INT >= 21) {
-                super.finishAndRemoveTask();
-            }
-            else {
-                super.finish();
-            }
         }
     }
 

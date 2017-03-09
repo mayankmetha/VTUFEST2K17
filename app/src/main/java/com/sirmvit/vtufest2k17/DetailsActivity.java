@@ -108,25 +108,26 @@ public class DetailsActivity extends AppCompatActivity{
         }
         switch(res) {
             case 0 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
-            case 1 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 1 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.sciblk); break;
             case 2 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.mainblk); break;
-            case 3 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
-            case 4 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 3 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.newaudi); break;
+            case 4 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.oldaudi); break;
             case 5 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.library); break;
             case 6 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.parking); break;
-            case 7 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
-            case 8 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
-            case 9 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
-            case 10: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 7 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.coffee); break;
+            case 8 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.rolls); break;
+            case 9 : bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.mechblk); break;
+            case 10: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.civblk); break;
             case 11: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.mba); break;
             case 12: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
-            case 13: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 13: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.work); break;
             case 14: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
             case 15: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.caneshop); break;
-            case 16: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 16: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.atm); break;
             case 17: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.canteen); break;
-            case 18: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
-            //case 19: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.demo); break;
+            case 18: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.busdpo); break;
+            case 19: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.ht); break;
+            case 20: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.la); break;
         }
         return bitmap;
     }

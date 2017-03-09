@@ -1,54 +1,86 @@
 {
   "Sir MVIT Entrance":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Science Block":
   [
-    {"eventName":"Battle Of Bands","eventDay":"1","eventTime":"10:30"},
-    {"eventName":"Dumb Charades","eventDay":"2","eventTime":"11:00"},
-    {"eventName":"Skit","eventDay":"3","eventTime":"12:30"}
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
   ],
   "New Block":
   [
-    {"eventName":"Solo Singing","eventDay":"1","eventTime":"10:30"},
-    {"eventName":"Solo Dancing","eventDay":"2","eventTime":"11:00"},
-    {"eventName":"Group Dancing","eventDay":"3","eventTime":"12:30"}
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
   ],
   "New Auditorium":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Old Auditorium":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Library":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Parking Lot":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Coffee Shop":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Rolls Corner & Stationary Shop":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Mechanical Block":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Civil Block":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "MBA Block":
   [
-    {"eventName":"Mimicry","eventDay":"1","eventTime":"10:30"},
-    {"eventName":"Debate","eventDay":"2","eventTime":"11:00"},
-    {"eventName":"Photography","eventDay":"3","eventTime":"12:30"}
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
   ],
   "Dental Block":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Workshop Block":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Grounds":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Sugarcane Juice Shop":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "ATM":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Canteen":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Sir MVIT Bus Depot":
-  [],
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
   "Washroom Block":
-  []
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ],
+  "Ladies Amenities Centre":
+  [
+    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+  ]
 }
