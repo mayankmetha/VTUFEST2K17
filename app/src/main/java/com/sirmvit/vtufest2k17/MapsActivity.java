@@ -71,6 +71,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             startActivity(i);
             return true;
         }
+        /*
         if(id == R.id.action_reset) {
             //reset SharedPreference
             mPrefManager.setFirstTimeLaunch(true);
@@ -81,6 +82,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             startActivity(i);
             return true;
         }
+        */
         return super.onOptionsItemSelected(item);
 
     }
@@ -200,6 +202,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onStart();
         if (isInitLaunch) {
             startActivity(new Intent(MapsActivity.this, FirstRunActivity.class));
+            finish();
         }
     }
 

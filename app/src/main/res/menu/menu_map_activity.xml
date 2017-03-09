@@ -10,9 +10,10 @@
         android:title="@string/about"
         app:showAsAction="ifRoom"/>
 
-    <!--Reset-->
+    <!--Reset
     <item
         android:id="@+id/action_reset"
         android:title="@string/reset"/>
+        -->
 
 </menu>
