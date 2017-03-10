@@ -83,6 +83,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             return true;
         }
         */
+        if(id == R.id.update) {
+            updater();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
 
     }
@@ -236,6 +240,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             return null;
         }
         return json;
+    }
+
+    private void updater() {
+
     }
 
 

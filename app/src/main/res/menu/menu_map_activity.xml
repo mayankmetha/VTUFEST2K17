@@ -15,5 +15,8 @@
         android:id="@+id/action_reset"
         android:title="@string/reset"/>
         -->
+    <item
+        android:id="@+id/update"
+        android:title="Check for update"/>
 
 </menu>
