@@ -16,7 +16,6 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -35,12 +34,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.ui.IconGenerator;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -288,10 +284,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         .setCancelable(false)
                         .setPositiveButton("Download & Install", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                String url = "https://raw.githubusercontent.com/mayankmetha/VTUFEST2K17/master/docs/repo/"+newVersion+".apk?";
-                                downloadUpdate update = new downloadUpdate();
-                                update.setContext(getApplicationContext());
-                                update.execute(url);
+                                //String url = "https://raw.githubusercontent.com/mayankmetha/VTUFEST2K17/master/docs/repo/" + newVersion + ".apk";
+                                String url = "https://github.com/mayankmetha/VTUFEST2K17/blob/master/docs/repo/" + newVersion + ".apk?raw=true";
+                                downloadUpdate(url);
                             }
                         })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -340,7 +335,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private class checkUpdate extends AsyncTask<URL, Void, String> {
         @Override
         protected String doInBackground(URL... urls) {
-            String str="";
+            String str = "";
             try {
                 BufferedReader in = new BufferedReader(new InputStreamReader(urls[0].openStream()));
                 str = in.readLine();
@@ -357,50 +352,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    private class downloadUpdate extends AsyncTask<String, Void, Void> {
-
-        private Context context;
-        public void setContext(Context contextf) {
-            context = contextf;
-        }
-        @Override
-        protected Void doInBackground(String... arg0) {
-            try {
-                URL url = new URL(arg0[0]);
-                HttpURLConnection c = (HttpURLConnection) url.openConnection();
-                c.setRequestMethod("GET");
-                c.setDoOutput(true);
-                c.connect();
-
-                File file = new File(String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)));
-                file.mkdirs();
-                File outputFile = new File(file, "yuva_kalanjali.apk");
-                if(outputFile.exists()){
-                    outputFile.delete();
-                }
-                FileOutputStream fos = new FileOutputStream(outputFile);
-
-                InputStream is = c.getInputStream();
-
-                byte[] buffer = new byte[1024];
-                int len1 = 0;
-                while ((len1 = is.read(buffer)) != -1) {
-                    fos.write(buffer, 0, len1);
-                }
-                fos.close();
-                is.close();
-
-                String fileToInstall = String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS))+"/yuva_kalanjali.apk";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setDataAndType(Uri.parse(fileToInstall), "application/com.sirmvit.vtufest2k17");
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // without this flag android returned a intent error!
-                context.startActivity(intent);
-
-
-            } catch (Exception e) {
-                Log.e("UpdateAPP", "Update error! " + e.getMessage());
-            }
-            return null;
-        }
+    void downloadUpdate(String str){
+        Intent intent = new Intent(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(str)));
+        startActivity(intent);
     }
+
 }
