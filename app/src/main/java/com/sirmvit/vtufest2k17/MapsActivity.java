@@ -1,5 +1,6 @@
 package com.sirmvit.vtufest2k17;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -9,6 +10,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +49,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private PrefManager mPrefManager;
     Boolean isInitLaunch;
     PackageInfo packageInfo;
+    private static double newVersion;
+    private static double curVersion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +96,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             return true;
         }
         */
-        if(id == R.id.update) {
+        if (id == R.id.update) {
             updater();
             return true;
         }
@@ -130,7 +136,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             Log.e(TAG, "Can't find style. Error: ", e);
         }
 
-        for(int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             MapsItem current = list.get(i);
             //style Marker
             googleMap.addMarker(new MarkerOptions().position(current.position)
@@ -148,24 +154,24 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    private Bitmap getMarker(String str){
+    private Bitmap getMarker(String str) {
         //text style
         IconGenerator iconfactory = new IconGenerator(this);
         iconfactory.setTextAppearance(R.style.MapLabel);
         iconfactory.setBackground(null);
         //get marker bitmap
-        Bitmap base = BitmapFactory.decodeResource(getResources(),R.drawable.marker_vector);
+        Bitmap base = BitmapFactory.decodeResource(getResources(), R.drawable.marker_vector);
         //generate text as bitmap
         Bitmap text = iconfactory.makeIcon(str);
         //final marker
         //Bitmap send = Bitmap.createBitmap(text.getWidth(),base.getHeight(),base.getConfig()); - old, DON'T DELETE
-        Bitmap send = Bitmap.createBitmap(text.getWidth(),(text.getHeight()+base.getHeight()),base.getConfig());
+        Bitmap send = Bitmap.createBitmap(text.getWidth(), (text.getHeight() + base.getHeight()), base.getConfig());
         //overlay text on base
         Canvas canvas = new Canvas(send);
-        float left = (float) (text.getWidth()*0.5-base.getWidth()*0.5);
+        float left = (float) (text.getWidth() * 0.5 - base.getWidth() * 0.5);
         //float top = (float) (base.getHeight()*0.5-text.getHeight()*0.5); - old, DON'T DELETE
-        float top = (float) (text.getHeight()*0.5);
-        canvas.drawBitmap(base,left,top,null);
+        float top = (float) (text.getHeight() * 0.5);
+        canvas.drawBitmap(base, left, top, null);
         canvas.drawBitmap(text, new Matrix(), null);
         return send;
     }
@@ -182,7 +188,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
-
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -190,15 +195,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                    finish();
+                        finish();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        if(android.os.Build.VERSION.SDK_INT >= 21) {
+                        if (android.os.Build.VERSION.SDK_INT >= 21) {
                             finishAndRemoveTask();
-                        }
-                        else {
+                        } else {
                             finish();
                         }
                     }
@@ -215,6 +219,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             startActivity(new Intent(MapsActivity.this, FirstRunActivity.class));
             finish();
         }
+        isNewUpdatePresent();
     }
 
     @Override
@@ -250,34 +255,95 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void updater() {
-        boolean updateRequired = checkUpdate();
-        Log.d(TAG,"updater value"+updateRequired);
+        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
+        if (activeNetwork != null && activeNetwork.isConnected()) {
+            isNewUpdatePresent();
+            new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        sleep(5000);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
+            try {
+                packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
+            curVersion = Double.parseDouble(packageInfo.versionName);
+            if (newVersion > curVersion) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("New update available. Want do download now?")
+                        .setCancelable(false)
+                        .setPositiveButton("Download & Install", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+            } else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("No new updates")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        } else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("No Internet Access")
+                    .setCancelable(false)
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                        }
+                    });
+            AlertDialog alert = builder.create();
+            alert.show();
+        }
     }
 
-    private boolean checkUpdate() {
-        String newVersion = "";
-        try {
-            URL url = new URL("https://github.com/mayankmetha/VTUFEST2K17/blob/master/docs/version");
-            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-            newVersion = in.readLine();
-            in.close();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+    private void isNewUpdatePresent() {
+        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
+        if (activeNetwork != null && activeNetwork.isConnected()) {
+            try {
+                URL url = new URL("https://raw.githubusercontent.com/mayankmetha/VTUFEST2K17/master/docs/version");
+                new checkUpdate().execute(url);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         }
-        try {
-            packageInfo = getPackageManager().getPackageInfo(getPackageName(),0);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        String curVersion = packageInfo.versionName;
-        if(newVersion.compareTo(curVersion)>=1) {
-            Log.d(TAG,"New Version avaliable!");
-            return true;
-        }
-        return false;
     }
 
+    private class checkUpdate extends AsyncTask<URL, Void, String> {
+        @Override
+        protected String doInBackground(URL... urls) {
+            String str="";
+            try {
+                BufferedReader in = new BufferedReader(new InputStreamReader(urls[0].openStream()));
+                str = in.readLine();
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            newVersion = Double.parseDouble(result);
+        }
+    }
 
 }
