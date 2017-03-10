@@ -2,6 +2,8 @@ package com.sirmvit.vtufest2k17;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,8 +27,12 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.ui.IconGenerator;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 
@@ -38,6 +44,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public static String jsonData = null;
     private PrefManager mPrefManager;
     Boolean isInitLaunch;
+    PackageInfo packageInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -243,7 +250,33 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void updater() {
+        boolean updateRequired = checkUpdate();
+        Log.d(TAG,"updater value"+updateRequired);
+    }
 
+    private boolean checkUpdate() {
+        String newVersion = "";
+        try {
+            URL url = new URL("https://github.com/mayankmetha/VTUFEST2K17/blob/master/docs/version");
+            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+            newVersion = in.readLine();
+            in.close();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            packageInfo = getPackageManager().getPackageInfo(getPackageName(),0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        String curVersion = packageInfo.versionName;
+        if(newVersion.compareTo(curVersion)>=1) {
+            Log.d(TAG,"New Version avaliable!");
+            return true;
+        }
+        return false;
     }
 
 
