@@ -54,6 +54,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static double newVersion;
     private static double curVersion;
     private ProgressDialog p;
+    private static Boolean updateCheckClick = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +101,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
         */
         if (id == R.id.update) {
+            updateCheckClick = true;
             updater();
             return true;
         }
@@ -222,6 +224,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             startActivity(new Intent(MapsActivity.this, FirstRunActivity.class));
             finish();
         }
+        updateCheckClick = false;
         updater();
     }
 
@@ -296,15 +299,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 AlertDialog alert = builder.create();
                 alert.show();
             } else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setMessage("No new updates")
-                        .setCancelable(false)
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                            }
-                        });
-                AlertDialog alert = builder.create();
-                alert.show();
+                if(updateCheckClick == true) {
+                    updateCheckClick = false;
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setMessage("No new updates")
+                            .setCancelable(false)
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                }
+                            });
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                }
             }
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
