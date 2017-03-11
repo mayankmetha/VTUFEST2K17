@@ -222,7 +222,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             startActivity(new Intent(MapsActivity.this, FirstRunActivity.class));
             finish();
         }
-        isNewUpdatePresent();
+        updater();
     }
 
     @Override
@@ -308,10 +308,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("No Internet Access")
+            builder.setMessage("No Internet Access. Map may show visual errors in offline mode.")
                     .setCancelable(false)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    .setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
+                            if (android.os.Build.VERSION.SDK_INT >= 21) {
+                                finishAndRemoveTask();
+                            } else {
+                                finish();
+                            }
                         }
                     });
             AlertDialog alert = builder.create();
