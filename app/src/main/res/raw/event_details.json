@@ -9,7 +9,10 @@
   ],
   "New Block":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Classical Instrumental (NonPercussion)","eventDay":"16-03-2017","eventTime":"08:30 AM"},
+    {"eventName":"Classical Instrumental (Percussion)","eventDay":"17-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Classical Vocal Solo","eventDay":"18-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Classical Vocal Solo","eventDay":"19-03-2017","eventTime":"08:00 AM"}
   ],
   "New Auditorium":
   [
@@ -20,7 +23,10 @@
   ],
   "Old Auditorium":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Collage","eventDay":"17-03-2017","eventTime":"08:30 AM"},
+    {"eventName":"Clay Modelling","eventDay":"18-03-2017","eventTime":"11:00 AM"},
+    {"eventName":"Rangoli","eventDay":"18-03-2017","eventTime":"03:00 PM"},
+    {"eventName":"Photography","eventDay":"19-03-2017","eventTime":"08:00 AM"}
   ],
   "Library":
   [
