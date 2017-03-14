@@ -57,7 +57,10 @@
   ],
   "Dental Block":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Elocution","eventDay":"16-03-2017","eventTime":"08:30 AM"},
+    {"eventName":"Mimicry","eventDay":"17-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Quiz (1st Round)","eventDay":"18-03-2017","eventTime":"08:30 AM"},
+    {"eventName":"Quiz (2nd Round)","eventDay":"19-03-2017","eventTime":"08:30 AM"}
   ],
   "Workshop Block":
   [
