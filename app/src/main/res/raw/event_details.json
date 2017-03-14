@@ -76,9 +76,12 @@
   [
     {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
   ],
-  "Sir MVIT Bus Depot":
+  "Bus Stand":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"One Act Play","eventDay":"16-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"One Act Play","eventDay":"17-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Classical Dance Solo","eventDay":"18-03-2017","eventTime":"08:30 AM"},
+    {"eventName":"Classical Dance Solo","eventDay":"19-03-2017","eventTime":"08:30 AM"}
   ],
   "Washroom Block":
   [
