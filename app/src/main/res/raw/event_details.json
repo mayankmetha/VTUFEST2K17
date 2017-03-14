@@ -9,10 +9,12 @@
   ],
   "New Block":
   [
-    {"eventName":"Classical Instrumental (NonPercussion)","eventDay":"16-03-2017","eventTime":"08:30 AM"},
-    {"eventName":"Classical Instrumental (Percussion)","eventDay":"17-03-2017","eventTime":"08:00 AM"},
-    {"eventName":"Classical Vocal Solo","eventDay":"18-03-2017","eventTime":"08:00 AM"},
-    {"eventName":"Classical Vocal Solo","eventDay":"19-03-2017","eventTime":"08:00 AM"}
+    {"eventName":"Classical Instrumental (NonPercussion) [CS Seminar Hall]","eventDay":"16-03-2017","eventTime":"08:30 AM"},
+    {"eventName":"Classical Instrumental (Percussion) [CS Seminar Hall]","eventDay":"17-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Debate [Marconi Seminar Hall]","eventDay":"17-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Classical Vocal Solo [CS Seminar Hall]","eventDay":"18-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Debate [Marconi Seminar Hall]","eventDay":"18-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Classical Vocal Solo [CS Seminar Hall]","eventDay":"19-03-2017","eventTime":"08:00 AM"}
   ],
   "New Auditorium":
   [
