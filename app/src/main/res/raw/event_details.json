@@ -13,7 +13,10 @@
   ],
   "New Auditorium":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Group Song (Western)","eventDay":"16-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Group Song (Indian)","eventDay":"17-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Light Vocal Indian (Solo)","eventDay":"18-03-2017","eventTime":"08:30 AM"},
+    {"eventName":"Western Vocal Solo","eventDay":"19-03-2017","eventTime":"08:00 AM"}
   ],
   "Old Auditorium":
   [
