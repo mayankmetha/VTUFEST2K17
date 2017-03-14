@@ -197,16 +197,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
                         if (android.os.Build.VERSION.SDK_INT >= 21) {
                             finishAndRemoveTask();
                         } else {
                             finish();
                         }
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
                     }
                 });
         AlertDialog alert = builder.create();
