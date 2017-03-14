@@ -1,11 +1,11 @@
 {
   "Sir MVIT Entrance":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Welcome to Sir MVIT","eventDay":"","eventTime":""}
   ],
   "Science Block":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"No events here","eventDay":"","eventTime":""}
   ],
   "New Block":
   [
@@ -35,9 +35,9 @@
   ],
   "Library":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"No events here","eventDay":"","eventTime":""}
   ],
-  "Parking Lot":
+  "Main Stage":
   [
     {"eventName":"Inaugural Function","eventDay":"16-03-2017","eventTime":"10:00 AM"},
     {"eventName":"Folk Orchestra","eventDay":"16-03-2017","eventTime":"02:00 PM"},
@@ -48,23 +48,23 @@
   ],
   "Coffee Shop":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Enjoy your drink!","eventDay":"","eventTime":""}
   ],
   "Rolls Corner & Stationary Shop":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Enjoy your food!","eventDay":"","eventTime":""}
   ],
   "Mechanical Block":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"No events here","eventDay":"","eventTime":""}
   ],
   "Civil Block":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"No events here","eventDay":"","eventTime":""}
   ],
   "MBA Block":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"No events here","eventDay":"","eventTime":""}
   ],
   "Dental Block":
   [
@@ -75,23 +75,23 @@
   ],
   "Workshop Block":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"No events here","eventDay":"","eventTime":""}
   ],
   "Grounds":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"No events here","eventDay":"","eventTime":""}
   ],
   "Sugarcane Juice Shop":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Enjoy your summer drink!","eventDay":"","eventTime":""}
   ],
   "ATM":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Ran out of cash?","eventDay":"","eventTime":""}
   ],
   "Canteen":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Enjoy your meals!","eventDay":"","eventTime":""}
   ],
   "Bus Stand":
   [
@@ -102,10 +102,22 @@
   ],
   "Washroom Block":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Guys only!","eventDay":"","eventTime":""}
   ],
   "Ladies Amenities Centre":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Ladies only!","eventDay":"","eventTime":""}
+  ],
+  "Food Mess":
+  [
+    {"eventName":"Enjoy your meals!","eventDay":"","eventTime":""}
+  ],
+  "Food Stall":
+  [
+    {"eventName":"Enjoy your dish!","eventDay":"","eventTime":""}
+  ],
+  "Indoor Stadium":
+  [
+    {"eventName":"","eventDay":"","eventTime":""}
   ]
 }

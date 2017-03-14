@@ -51,7 +51,7 @@ class MapsContent {
         addItem(new MapsItem(3,"New Auditorium",LOC_NA,LOC_AUDIBUS));
         addItem(new MapsItem(4,"Old Auditorium",LOC_OA,LOC_AUDIBUS));
         addItem(new MapsItem(5,"Library",LOC_LIB,LOC_LIB));
-        addItem(new MapsItem(6,"Parking Lot",LOC_PL,LOC_PL));
+        addItem(new MapsItem(6,"Main Stage",LOC_PL,LOC_PL));
         addItem(new MapsItem(7,"Coffee Shop",LOC_CS,LOC_CS));
         addItem(new MapsItem(8,"Rolls Corner & Stationary Shop",LOC_RS,LOC_RS));
         addItem(new MapsItem(9,"Mechanical Block",LOC_ME,LOC_ME));
