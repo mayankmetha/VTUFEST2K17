@@ -63,7 +63,7 @@ class MapsContent {
         addItem(new MapsItem(15,"Sugarcane Juice Shop",LOC_SUGAR,LOC_SUGAR));
         addItem(new MapsItem(16,"ATM",LOC_ATM,LOC_ATM));
         addItem(new MapsItem(17,"Canteen",LOC_CANT,LOC_CANT));
-        addItem(new MapsItem(18,"Sir MVIT Bus Depot",LOC_BUS,LOC_AUDIBUS));
+        addItem(new MapsItem(18,"Bus Stand",LOC_BUS,LOC_AUDIBUS));
         addItem(new MapsItem(19,"Washroom Block",LOC_HT,LOC_HT));
         addItem(new MapsItem(20,"Ladies Amenities Centre",LOC_LA,LOC_LA));
         addItem(new MapsItem(21,"Food Mess",LOC_MESS,LOC_MESS));
