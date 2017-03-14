@@ -1,6 +1,5 @@
 package com.sirmvit.vtufest2k17;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -53,7 +52,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     PackageInfo packageInfo;
     private static double newVersion;
     private static double curVersion;
-    private ProgressDialog p;
     private static Boolean updateCheckClick = false;
 
     @Override
@@ -125,7 +123,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.setOnMarkerClickListener(this);
         googleMap.clear();
         final List<MapsItem> list = MapsContent.ITEMS;
-        //final List<MapsItem> hts = MapsContent.HTS;
         //style Map
         try {
             // Customise the styling of the base map using a JSON object defined
@@ -299,7 +296,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 AlertDialog alert = builder.create();
                 alert.show();
             } else {
-                if(updateCheckClick == true) {
+                if(updateCheckClick) {
                     updateCheckClick = false;
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setMessage("No new updates")

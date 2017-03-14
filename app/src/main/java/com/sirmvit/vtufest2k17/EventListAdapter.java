@@ -35,8 +35,8 @@ public class EventListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         MyHolder myHolder = (MyHolder) holder;
         EventItem current = data.get(position);
         myHolder.eventName.setText(current.name);
-        myHolder.eventDay.setText("Day : " + current.day);
-        myHolder.eventTime.setText("Time : "+current.time);
+        myHolder.eventDay.setText(current.day);
+        myHolder.eventTime.setText(current.time);
 
     }
 

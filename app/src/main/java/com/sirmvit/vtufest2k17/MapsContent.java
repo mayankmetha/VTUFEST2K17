@@ -27,19 +27,15 @@ class MapsContent {
     private static final LatLng LOC_SUGAR = new LatLng(13.149946,77.609871); // Sugarcane - 15
     private static final LatLng LOC_ATM = new LatLng(13.149824,77.610034);//atm - 16
     private static final LatLng LOC_CANT = new LatLng(13.149910,77.610383); //canteen - 17
-    private static final LatLng LOC_BUS = new LatLng(13.1511705,77.6073934); //bus depot - 18
+    private static final LatLng LOC_BUS = new LatLng(13.150900,77.607393); //bus depot - 18
     private static final LatLng LOC_HT = new LatLng(13.151100, 77.608221); // washroom block - 19
     private static final LatLng LOC_LA = new LatLng(13.151250, 77.608221); //ladies amenities -20
+    private static final LatLng LOC_MESS = new LatLng(13.148428, 77.609227); //mess ground -21
+    private static final LatLng LOC_FOOD1 = new LatLng(13.149788, 77.609573); //food stall near cane shop -22
+    private static final LatLng LOC_FOOD2 = new LatLng(13.150937, 77.607014); //food stall near depot -23
     private static final LatLng LOC_AUDIBUS = new LatLng(13.150918,77.607582); //navigation for auditorium and bus depot
     private static final LatLng LOC_GROUNDNAV = new LatLng(13.149468, 77.606194);//navigation for ground
     static List<MapsItem> ITEMS;
-    //static List<MapsItem> HTS; //washrooms
-    //private static final LatLng HTS_SCIENCE = new LatLng(13.150680, 77.609000);
-    //private static final LatLng HTS_NB = new LatLng(13.151000, 77.609900);
-    //private static final LatLng HTS_ME = new LatLng(13.150700, 77.608100);
-    //private static final LatLng HTS_CB = new LatLng(13.151156, 77.60850);
-    //private static final LatLng HTS_MBA = new LatLng(13.151200, 77.609377);
-    //private static final LatLng HTS_HT = new LatLng(13.151100, 77.608221);
 
 
     private static void addItem(MapsItem item) {
@@ -69,5 +65,8 @@ class MapsContent {
         addItem(new MapsItem(18,"Sir MVIT Bus Depot",LOC_BUS,LOC_AUDIBUS));
         addItem(new MapsItem(19,"Washroom Block",LOC_HT,LOC_HT));
         addItem(new MapsItem(20,"Ladies Amenities Centre",LOC_LA,LOC_LA));
+        addItem(new MapsItem(21,"Food Mess",LOC_MESS,LOC_MESS));
+        addItem(new MapsItem(22,"Food Stall",LOC_FOOD1,LOC_FOOD1));
+        addItem(new MapsItem(23,"Food Stall",LOC_FOOD2,LOC_AUDIBUS));
     }
 }
