@@ -25,7 +25,12 @@
   ],
   "Parking Lot":
   [
-    {"eventName":"Events not yet announced","eventDay":"","eventTime":""}
+    {"eventName":"Inaugural Function","eventDay":"16-03-2017","eventTime":"10:00 AM"},
+    {"eventName":"Folk Orchestra","eventDay":"16-03-2017","eventTime":"02:00 PM"},
+    {"eventName":"Skit","eventDay":"17-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Folk/Tribal Dance","eventDay":"18-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Mime","eventDay":"19-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Valedictory Function","eventDay":"19-03-2017","eventTime":"03:30 PM"}
   ],
   "Coffee Shop":
   [
