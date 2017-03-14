@@ -10,10 +10,13 @@
   "New Block":
   [
     {"eventName":"Classical Instrumental (NonPercussion) [CS Seminar Hall]","eventDay":"16-03-2017","eventTime":"08:30 AM"},
+    {"eventName":"On Spot Painting [NB 415/418]","eventDay":"16-03-2017","eventTime":"02:00 PM"},
     {"eventName":"Classical Instrumental (Percussion) [CS Seminar Hall]","eventDay":"17-03-2017","eventTime":"08:00 AM"},
     {"eventName":"Debate [Marconi Seminar Hall]","eventDay":"17-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Poster Making [NB 415/418]","eventDay":"17-03-2017","eventTime":"11:30 AM"},
     {"eventName":"Classical Vocal Solo [CS Seminar Hall]","eventDay":"18-03-2017","eventTime":"08:00 AM"},
     {"eventName":"Debate [Marconi Seminar Hall]","eventDay":"18-03-2017","eventTime":"08:00 AM"},
+    {"eventName":"Cartooning [NB 415/418]","eventDay":"18-03-2017","eventTime":"08:30 PM"},
     {"eventName":"Classical Vocal Solo [CS Seminar Hall]","eventDay":"19-03-2017","eventTime":"08:00 AM"}
   ],
   "New Auditorium":
