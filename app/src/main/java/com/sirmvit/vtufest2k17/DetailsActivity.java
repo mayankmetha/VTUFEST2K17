@@ -128,11 +128,12 @@ public class DetailsActivity extends AppCompatActivity{
             case 18: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.busdpo); break;
             case 19: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.ht); break;
             case 20: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.la); break;
-            //TODO:get pics ready
-            case 21: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.collegelogo); break;
-            case 22: bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.collegelogo); break;
-            case 23: bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.collegelogo); break;
-            case 24: bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.collegelogo); break;
+            case 21: bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.mess); break;
+            case 22: bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.food1); break;
+            case 23: bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.stall); break;
+            case 24: bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.badcourt); break;
+            case 25: bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.); break;
+            case 26: bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.collegelogo); break;
         }
         return bitmap;
     }

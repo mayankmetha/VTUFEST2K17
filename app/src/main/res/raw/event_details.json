@@ -5,10 +5,11 @@
   ],
   "Science Block":
   [
-    {"eventName":"No events here","eventDay":"","eventTime":""}
+    {"eventName":"Accommodation available here","eventDay":"","eventTime":""}
   ],
   "New Block":
   [
+    {"eventName":"Accommodation available here","eventDay":"","eventTime":""},
     {"eventName":"Classical Instrumental (NonPercussion) [CS Seminar Hall]","eventDay":"Day : 16-03-2017","eventTime":"Time : 08:30 AM"},
     {"eventName":"On Spot Painting [NB 415/418]","eventDay":"Day : 16-03-2017","eventTime":"Time : 02:00 PM"},
     {"eventName":"Classical Instrumental (Percussion) [CS Seminar Hall]","eventDay":"Day : 17-03-2017","eventTime":"Time : 08:00 AM"},
@@ -56,11 +57,11 @@
   ],
   "Mechanical Block":
   [
-    {"eventName":"No events here","eventDay":"","eventTime":""}
+    {"eventName":"Accommodation available here","eventDay":"","eventTime":""}
   ],
   "Civil Block":
   [
-    {"eventName":"No events here","eventDay":"","eventTime":""}
+    {"eventName":"Accommodation available here","eventDay":"","eventTime":""}
   ],
   "MBA Block":
   [
@@ -112,12 +113,24 @@
   [
     {"eventName":"Enjoy your meals!","eventDay":"","eventTime":""}
   ],
-  "Food Stall":
+  "Food Stall 1":
+  [
+    {"eventName":"Enjoy your dish!","eventDay":"","eventTime":""}
+  ],
+  "Food Stall 2":
   [
     {"eventName":"Enjoy your dish!","eventDay":"","eventTime":""}
   ],
   "Indoor Stadium":
   [
     {"eventName":"Installation","eventDay":"Day : 2","eventTime":"Time : 03:00 PM"}
+  ],
+  "Mens' Hostel":
+  [
+    {"eventName":"Accommodation available here","eventDay":"","eventTime":""}
+  ],
+  "Ladies' Hostel & Staff Quarters":
+  [
+    {"eventName":"Accommodation available here","eventDay":"","eventTime":""}
   ]
 }

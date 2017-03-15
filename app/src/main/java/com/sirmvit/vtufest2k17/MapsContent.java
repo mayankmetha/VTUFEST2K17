@@ -34,6 +34,8 @@ class MapsContent {
     private static final LatLng LOC_FOOD1 = new LatLng(13.149788, 77.609573); //food stall near cane shop -22
     private static final LatLng LOC_FOOD2 = new LatLng(13.150937, 77.607014); //food stall near depot -23
     private static final LatLng LOC_INDOOR = new LatLng(13.149512, 77.610037); //indoor stadium - 24
+    private static final LatLng LOC_MEN = new LatLng(13.148790, 77.608935); //mens hostel -25
+    private static final LatLng LOC_LADIES = new LatLng(13.148651, 77.603334); //ladies hostel & staff quarters -26
     private static final LatLng LOC_AUDIBUS = new LatLng(13.150918,77.607582); //navigation for auditorium and bus depot
     private static final LatLng LOC_GROUNDNAV = new LatLng(13.149468, 77.606194);//navigation for ground
     static List<MapsItem> ITEMS;
@@ -67,8 +69,10 @@ class MapsContent {
         addItem(new MapsItem(19,"Washroom Block",LOC_HT,LOC_HT));
         addItem(new MapsItem(20,"Ladies Amenities Centre",LOC_LA,LOC_LA));
         addItem(new MapsItem(21,"Food Mess",LOC_MESS,LOC_MESS));
-        addItem(new MapsItem(22,"Food Stall",LOC_FOOD1,LOC_FOOD1));
-        addItem(new MapsItem(23,"Food Stall",LOC_FOOD2,LOC_AUDIBUS));
-        addItem(new MapsItem(24,"Indoor Stadium", LOC_INDOOR,LOC_INDOOR));
+        addItem(new MapsItem(22,"Food Stall 1",LOC_FOOD1,LOC_FOOD1));
+        addItem(new MapsItem(23,"Food Stall 2",LOC_FOOD2,LOC_AUDIBUS));
+        addItem(new MapsItem(24,"Badminton Court", LOC_INDOOR,LOC_INDOOR));
+        addItem(new MapsItem(25,"Mens' Hostel",LOC_MEN,LOC_MEN));
+        addItem(new MapsItem(26,"Ladies' Hostel & Staff Quarters",LOC_LADIES,LOC_LADIES));
     }
 }
