@@ -10,29 +10,30 @@
   "New Block":
   [
     {"eventName":"Accommodation available here","eventDay":"","eventTime":""},
-    {"eventName":"Classical Instrumental (NonPercussion) [CS Seminar Hall]","eventDay":"Day : 16-03-2017","eventTime":"Time : 08:30 AM"},
-    {"eventName":"On Spot Painting [NB 415/418]","eventDay":"Day : 16-03-2017","eventTime":"Time : 02:00 PM"},
-    {"eventName":"Classical Instrumental (Percussion) [CS Seminar Hall]","eventDay":"Day : 17-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Debate [Marconi Seminar Hall]","eventDay":"Day : 17-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Poster Making [NB 415/418]","eventDay":"Day : 17-03-2017","eventTime":"Time : 11:30 AM"},
-    {"eventName":"Classical Vocal Solo [CS Seminar Hall]","eventDay":"Day : 18-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Debate [Marconi Seminar Hall]","eventDay":"Day : 18-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Cartooning [NB 415/418]","eventDay":"Day : 18-03-2017","eventTime":"Time : 08:30 PM"},
-    {"eventName":"Classical Vocal Solo [CS Seminar Hall]","eventDay":"Day : 19-03-2017","eventTime":"Time : 08:00 AM"}
+    {"eventName":"Classical Instrumental (Percussion) [CS Seminar Hall]","eventDay":"DATE : 16-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"On Spot Painting [NB 415/418]","eventDay":"DATE : 16-03-2017","eventTime":"Time : 02:00 PM"},
+    {"eventName":"Classical Instrumental (NonPercussion) [CS Seminar Hall]","eventDay":"DATE : 17-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Debate [Marconi Seminar Hall]","eventDay":"DATE : 17-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Poster Making [NB 415/418]","eventDay":"DATE : 17-03-2017","eventTime":"Time : 11:30 AM"},
+    {"eventName":"Classical Vocal Solo [CS Seminar Hall]","eventDay":"DATE : 18-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Debate [Marconi Seminar Hall]","eventDay":"DATE : 18-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Cartooning [NB 415/418]","eventDay":"DATE : 18-03-2017","eventTime":"Time : 08:30 PM"},
+    {"eventName":"Classical Vocal Solo [CS Seminar Hall]","eventDay":"DATE : 19-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Mimicry [Marconi Seminar Hall]","eventDay":"DATE : 19-03-2017","eventTime":"Time : 08:00 AM"}
   ],
-  "New Auditorium":
+  "Bus Stand":
   [
-    {"eventName":"Group Song (Western)","eventDay":"Day : 16-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Group Song (Indian)","eventDay":"Day : 17-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Light Vocal Indian (Solo)","eventDay":"Day : 18-03-2017","eventTime":"Time : 08:30 AM"},
-    {"eventName":"Western Vocal Solo","eventDay":"Day : 19-03-2017","eventTime":"Time : 08:00 AM"}
+    {"eventName":"Group Song (Western)","eventDay":"DATE : 16-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Group Song (Indian)","eventDay":"DATE : 17-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Light Vocal Indian (Solo)","eventDay":"DATE : 18-03-2017","eventTime":"Time : 08:30 AM"},
+    {"eventName":"Western Vocal Solo","eventDay":"DATE : 19-03-2017","eventTime":"Time : 08:00 AM"}
   ],
   "Old Auditorium":
   [
-    {"eventName":"Collage","eventDay":"Day : 17-03-2017","eventTime":"Time : 08:30 AM"},
-    {"eventName":"Clay Modelling","eventDay":"Day : 18-03-2017","eventTime":"Time : 11:00 AM"},
-    {"eventName":"Rangoli","eventDay":"Day : 18-03-2017","eventTime":"Time : 03:00 PM"},
-    {"eventName":"Photography","eventDay":"Day : 19-03-2017","eventTime":"Time : 08:00 AM"}
+    {"eventName":"Collage","eventDay":"DATE : 17-03-2017","eventTime":"Time : 08:30 AM"},
+    {"eventName":"Clay Modelling","eventDay":"DATE : 18-03-2017","eventTime":"Time : 11:00 AM"},
+    {"eventName":"Rangoli","eventDay":"DATE : 18-03-2017","eventTime":"Time : 03:00 PM"},
+    {"eventName":"Photography","eventDay":"DATE : 19-03-2017","eventTime":"Time : 08:00 AM"}
   ],
   "Library":
   [
@@ -40,12 +41,12 @@
   ],
   "Parking Lot":
   [
-    {"eventName":"Inaugural Function","eventDay":"Day : 16-03-2017","eventTime":"Time : 10:00 AM"},
-    {"eventName":"Folk Orchestra","eventDay":"Day : 16-03-2017","eventTime":"Time : 02:00 PM"},
-    {"eventName":"Skit","eventDay":"Day : 17-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Folk/Tribal Dance","eventDay":"Day : 18-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Mime","eventDay":"Day : 19-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Valedictory Function","eventDay":"Day : 19-03-2017","eventTime":"Time : 03:30 PM"}
+    {"eventName":"Inaugural Function","eventDay":"DATE : 16-03-2017","eventTime":"Time : 10:00 AM"},
+    {"eventName":"Folk Orchestra","eventDay":"DATE : 16-03-2017","eventTime":"Time : 02:00 PM"},
+    {"eventName":"Skit","eventDay":"DATE : 17-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Folk/Tribal Dance","eventDay":"DATE : 18-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Mime","eventDay":"DATE : 19-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Valedictory Function","eventDay":"DATE : 19-03-2017","eventTime":"Time : 03:30 PM"}
   ],
   "Coffee Shop":
   [
@@ -69,10 +70,9 @@
   ],
   "Dental Block":
   [
-    {"eventName":"Elocution","eventDay":"Day : 16-03-2017","eventTime":"Time : 08:30 AM"},
-    {"eventName":"Mimicry","eventDay":"Day : 17-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Quiz (1st Round)","eventDay":"Day : 18-03-2017","eventTime":"Time : 08:30 AM"},
-    {"eventName":"Quiz (2nd Round)","eventDay":"Day : 19-03-2017","eventTime":"Time : 08:30 AM"}
+    {"eventName":"Elocution","eventDay":"DATE : 16-03-2017","eventTime":"Time : 08:30 AM"},
+    {"eventName":"Quiz (1st Round)","eventDay":"DATE : 18-03-2017","eventTime":"Time : 08:30 AM"},
+    {"eventName":"Quiz (2nd Round)","eventDay":"DATE : 19-03-2017","eventTime":"Time : 08:30 AM"}
   ],
   "Workshop Block":
   [
@@ -94,12 +94,12 @@
   [
     {"eventName":"Enjoy your meals!","eventDay":"","eventTime":""}
   ],
-  "Bus Stand":
+  "New Auditorium":
   [
-    {"eventName":"One Act Play","eventDay":"Day : 16-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"One Act Play","eventDay":"Day : 17-03-2017","eventTime":"Time : 08:00 AM"},
-    {"eventName":"Classical Dance Solo","eventDay":"Day : 18-03-2017","eventTime":"Time : 08:30 AM"},
-    {"eventName":"Classical Dance Solo","eventDay":"Day : 19-03-2017","eventTime":"Time : 08:30 AM"}
+    {"eventName":"One Act Play","eventDay":"DATE : 16-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"One Act Play","eventDay":"DATE : 17-03-2017","eventTime":"Time : 08:00 AM"},
+    {"eventName":"Classical Dance Solo","eventDay":"DATE : 18-03-2017","eventTime":"Time : 08:30 AM"},
+    {"eventName":"Classical Dance Solo","eventDay":"DATE : 19-03-2017","eventTime":"Time : 08:30 AM"}
   ],
   "Washroom Block":
   [
@@ -123,7 +123,7 @@
   ],
   "Badminton Court":
   [
-    {"eventName":"Installation","eventDay":"Day : 2","eventTime":"Time : 03:00 PM"}
+    {"eventName":"Installation","eventDay":"DATE : 17-03-2017","eventTime":"Time : 03:00 PM"}
   ],
   "Mens' Hostel":
   [
